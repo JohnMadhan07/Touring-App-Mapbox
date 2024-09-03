@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Map, { Marker } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import './Maps.css'; // Ensure you have a corresponding CSS file if needed
+import './Maps.css'; 
 
 const apiKey = process.env.REACT_APP_MAPBOX_API_TOKEN;
 
@@ -29,7 +29,7 @@ const MapboxComponent = () => {
     if (mapRenderStartTime) {
       // Calculate the time taken for the initial map render
       const currentTime = new Date();
-      const elapsedTime = (currentTime - mapRenderStartTime) / 1000; // Convert milliseconds to seconds
+      const elapsedTime = (currentTime - mapRenderStartTime) / 1000; 
       setMapRenderDuration(elapsedTime);
     }
   }, [mapRenderStartTime]);

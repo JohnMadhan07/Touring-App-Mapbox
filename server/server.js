@@ -2,7 +2,7 @@ const express = require('express');
 const request = require('request');
 require('dotenv').config();
 const app = express();
-const mapboxToken = 'pk.eyJ1IjoibWFkaGFuMjgyMiIsImEiOiJjbTBiMXJiZWcwNDd6MnBzOGk3NjNubzI5In0.0jJuUSZwA3gLTvvICxoU3Q' 
+const mapboxToken = '' 
 
 let cachedRouteData = null;
 let cacheTimestamp = null;

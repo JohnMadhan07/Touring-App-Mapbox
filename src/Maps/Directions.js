@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Map, { Marker } from 'react-map-gl';
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
-import 'mapbox-gl/dist/mapbox-gl.css'; // Ensure Mapbox CSS is imported
+import 'mapbox-gl/dist/mapbox-gl.css'; 
 import './Maps.css';
 
 const apiKey = process.env.REACT_APP_MAPBOX_API_TOKEN;
@@ -28,7 +28,7 @@ const DirectionsMap = () => {
         accessToken: apiKey,
         unit: 'metric',
         profile: 'mapbox/driving',
-        controls: { inputs: false }, // Disable the input forms
+        controls: { inputs: false }, 
       });
 
       map.addControl(directions, 'top-left');
@@ -36,7 +36,7 @@ const DirectionsMap = () => {
 
       const handleCalculateRoute = () => {
         if (directionsRef.current) {
-          const startTime = new Date(); // Start timing
+          const startTime = new Date(); 
 
           directionsRef.current.setOrigin([defaultCenter.longitude, defaultCenter.latitude]);
           directionsRef.current.setDestination([destination.longitude, destination.latitude]);
@@ -48,9 +48,9 @@ const DirectionsMap = () => {
 
               setDistance(`${routeDistance.toFixed(2)} km`);
 
-              const endTime = new Date(); // End timing
-              const elapsedTime = (endTime - startTime) / 1000; // Calculate elapsed time in seconds
-              setCalculationTime(elapsedTime.toFixed(2)); // Save the elapsed time
+              const endTime = new Date(); 
+              const elapsedTime = (endTime - startTime) / 1000; 
+              setCalculationTime(elapsedTime.toFixed(2)); 
             }
           });
         }

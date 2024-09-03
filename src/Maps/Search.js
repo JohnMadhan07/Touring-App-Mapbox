@@ -25,7 +25,7 @@ const MapboxSearch = () => {
       geocoder.current = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl,
-        marker: false, // Do not add a default marker
+        marker: false, 
         placeholder: 'Enter a location',
       });
 
@@ -39,7 +39,6 @@ const MapboxSearch = () => {
         const { result } = e;
         const [lng, lat] = result.center;
 
-        // Set selected place state
         setSelectedPlace({
           name: result.text,
           position: { lat, lng },
